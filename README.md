@@ -1,5 +1,7 @@
 # Projeto Web Estacio 2
 
+Repositório: https://github.com/serajonas/Projeto-Web---Estacio
+
 Este projeto é uma landing page dinâmica que consome dados de uma API PHP e armazena projetos em um banco de dados MySQL.
 
 ## Estrutura
