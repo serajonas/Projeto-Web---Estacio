@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Desenvolvimento Web</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6886b99fe4.js"></script>
+</head>
+
+<body>
+
+<div id="container">
+
+    <!-- Cabeçalho -->
+    <header id="cabecalho">
+
+        <h1>Jonas Serafim</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#" data-page="homePage" class="active">Início</a></li>
+                <li><a href="#" data-page="projectsPage">Projetos</a></li>
+                <li><a href="#" data-page="morePage">Mais</a></li>
+                <li><a href="#" data-page="aboutPage">Sobre Mim</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Banner comum para todas as páginas -->
+    <section id="banner">
+        <span class="content">
+            <h2>Curso de Web</h2>
+            <p id="descricaoBanner">Carregando informações...</p>
+            <a href="#" class="circulo" id="scrollProjects">
+                <i class="fas fa-angle-double-down"></i>
+            </a>
+        </span>
+    </section>
+
+    <!-- Página inicial -->
+    <section id="homePage" class="page active">
+        <div class="page-header">
+            <h2>Bem-vindo</h2>
+            <p>Aqui você encontra um portfólio com projetos e informações profissionais.</p>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projectsPage" class="page">
+        <div class="page-header">
+            <h2>Projetos</h2>
+            <p>Confira os projetos existentes e adicione novos itens ao portfólio.</p>
+        </div>
+
+        <div class="page-actions">
+            <button id="toggleProjetoForm" class="btn-secondary">Mostrar formulário de projeto</button>
+        </div>
+
+        <div class="formulario-projeto hidden" id="projetoFormContainer">
+            <h3>Adicionar novo projeto</h3>
+            <form id="projetoForm">
+                <input name="nome" id="nomeProjeto" type="text" placeholder="Nome do projeto" required>
+                <input name="categoria" id="categoriaProjeto" type="text" placeholder="Categoria" required>
+                <input name="data" id="dataProjeto" type="text" placeholder="Data (ex: Junho 2024)" required>
+                <textarea name="descricao" id="descricaoProjeto" placeholder="Descrição do projeto" required></textarea>
+                <button type="submit">Salvar projeto</button>
+            </form>
+        </div>
+
+        <div id="listaProjetos">
+            Carregando...
+        </div>
+    </section>
+
+    <!-- Mais -->
+    <section id="morePage" class="page">
+        <div class="page-header">
+            <h2>Mais</h2>
+            <p>Informações adicionais sobre habilidades, contato e objetivos.</p>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <h3>Habilidades</h3>
+                <p id="maisHabilidades"></p>
+            </div>
+            <div class="info-box">
+                <h3>Contato</h3>
+                <p id="maisContato"></p>
+            </div>
+            <div class="info-box">
+                <h3>Objetivo</h3>
+                <p id="maisObjetivo"></p>
+            </div>
+        </div>
+
+        <div class="page-actions">
+            <button id="toggleMaisForm" class="btn-secondary">Editar informações de Mais</button>
+        </div>
+
+        <div class="formulario-mais hidden" id="maisFormContainer">
+            <form id="maisForm">
+                <label for="maisHabilidadesInput">Habilidades</label>
+                <textarea id="maisHabilidadesInput" rows="3" placeholder="Descreva suas habilidades"></textarea>
+
+                <label for="maisContatoInput">Contato</label>
+                <textarea id="maisContatoInput" rows="2" placeholder="Escreva um telefone, e-mail ou redes"></textarea>
+
+                <label for="maisObjetivoInput">Objetivo</label>
+                <textarea id="maisObjetivoInput" rows="3" placeholder="Escreva seu objetivo profissional"></textarea>
+
+                <button type="submit">Salvar Mais</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="aboutPage" class="page">
+        <div class="page-header">
+            <h2>Sobre Mim</h2>
+            <p>Profissional com experiência em TI, desenvolvimento web e suporte técnico. Esta seção apresenta sua trajetória, competências e contatos de forma clara e moderna.</p>
+        </div>
+
+        <div class="about-grid">
+            <aside class="profile-card">
+                <div class="profile-image">
+                    <img src="https://github.com/serajonas.png" alt="Foto de perfil do GitHub de Jonas Serafim">
+                </div>
+                <h3>Jonas Serafim</h3>
+                <p class="profile-title">Analista de Suporte de TI & Desenvolvedor Web</p>
+
+                <ul class="profile-list">
+                    <li><strong>Localização:</strong> Americana, SP</li>
+                    <li><strong>Especialidades:</strong> PHP, JavaScript, MySQL, Windows Server</li>
+                    <li><strong>Disponibilidade:</strong> Projetos e vagas em tempo integral</li>
+                </ul>
+
+                <div class="contact-label">Contato profissional</div>
+                <div class="contact-links">
+                    <a href="https://github.com/serajonas" target="_blank" rel="noopener">
+                        <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.297 3.438 9.797 8.205 11.387.6.113.82-.26.82-.578 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.303-5.467-1.335-5.467-5.93 0-1.31.47-2.383 1.235-3.222-.123-.303-.535-1.523.117-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.655 1.653.243 2.873.12 3.176.77.839 1.23 1.912 1.23 3.222 0 4.61-2.807 5.625-5.48 5.92.432.372.816 1.102.816 2.222 0 1.606-.015 2.896-.015 3.286 0 .32.21.694.825.576C20.565 22.09 24 17.59 24 12.297 24 5.67 18.627.297 12 .297z"/></svg></span>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/jonasserafim/" target="_blank" rel="noopener">
+                        <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.98h4.56V24H.22V8.98zm7.5 0H12.8v2.12h.07c.52-.99 1.8-2.03 3.7-2.03 3.95 0 4.69 2.6 4.69 6V24h-4.55v-7.05c0-1.68-.03-3.85-2.34-3.85-2.34 0-2.7 1.82-2.7 3.7V24H7.72V8.98z"/></svg></span>
+                        LinkedIn
+                    </a>
+                    <a href="https://wa.me/5519987122278" target="_blank" rel="noopener">
+                        <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.148-1.758-.867-2.03-.967-.273-.1-.472-.148-.67.148-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.148-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.148-.173.198-.297.298-.495.1-.198.05-.371-.025-.52-.074-.148-.67-1.615-.92-2.216-.242-.579-.487-.5-.67-.51l-.57-.01c-.198 0-.52.074-.792.371-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.148.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.413-.074-.124-.273-.198-.57-.347zM12 2.04C6.478 2.04 2.04 6.478 2.04 12S6.478 21.96 12 21.96 21.96 17.522 21.96 12 17.522 2.04 12 2.04zm0 17.82c-3.206 0-5.82-2.614-5.82-5.82S8.794 8.22 12 8.22s5.82 2.614 5.82 5.82-2.614 5.82-5.82 5.82z"/></svg></span>
+                        WhatsApp
+                    </a>
+                    <a href="mailto:serajonas@gmail.com">
+                        <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.25l-8 5.25-8-5.25V6l8 5 8-5v2.25z"/></svg></span>
+                        E-mail
+                    </a>
+                </div>
+            </aside>
+
+            <div class="about-content">
+                <div class="descricao-box">
+                    <h3>Resumo profissional</h3>
+                    <p id="sobreDescricao">Carregando informações...</p>
+                    <button id="toggleDescricaoForm" class="btn-secondary">Editar descrição</button>
+                    <form id="descricaoForm" class="descricao-form hidden">
+                        <input id="descricaoInput" type="text" placeholder="Digite uma nova descrição" required>
+                        <button type="submit">Atualizar descrição</button>
+                    </form>
+                </div>
+
+                <div class="about-card">
+                    <h3>Principais competências</h3>
+                    <div class="skills-list">
+                        <span class="skill-pill">PHP</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">MySQL</span>
+                        <span class="skill-pill">HTML5</span>
+                        <span class="skill-pill">CSS3</span>
+                        <span class="skill-pill">Windows Server</span>
+                        <span class="skill-pill">Linux</span>
+                        <span class="skill-pill">ITIL</span>
+                        <span class="skill-pill">Infraestrutura</span>
+                        <span class="skill-pill">APIs REST</span>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <h3>Como trabalho</h3>
+                    <p>Busco entregar soluções claras e funcionais, combinando conhecimento técnico em infraestrutura com desenvolvimento web. Itero rapidamente em projetos, mantenho comunicação aberta e foco em resultados que facilitem a rotina do cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
